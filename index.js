@@ -64,9 +64,9 @@ try {
     if (hostArch != '')
         vsDevCmdArgs.push(`-host_arch=${hostArch}`)
     if (toolsetVersion != '')
-        vsDevCmdArgs.push(`-vcvars_ver=${toolsetVersion}`)
+        vsDevCmdArgs.push(`-vcvars_ver="${toolsetVersion}"`)
     if (winsdk != '')
-        vsDevCmdArgs.push(`-winsdk=${winsdk}`)
+        vsDevCmdArgs.push(`-winsdk="${winsdk}"`)
     
     const cmdArgs = [ '/q', '/k'].concat(vsDevCmdArgs, ['&&', 'set'])
 
