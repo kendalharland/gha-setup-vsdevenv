@@ -81,6 +81,8 @@ try {
         .filter(s => !!s)
         .map(s => s.trim())
 
+    console.log(`COMMAND OUTPUT: ${cmdOutput}`)
+
     const completeEnv = cmdOutput
         .filter(s => s.indexOf('=') != -1)
         .map(s => s.split('=', 2))
